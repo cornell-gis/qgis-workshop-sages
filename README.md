@@ -1,10 +1,16 @@
-# QGIS workshop for SAGES (Geneva) 2021-11-15
+# QGIS workshop for SAGES (Geneva)
 
-This document:
+Workshop tutorial created by Keith Jenkins kgj2@cornell.edu, Mann Library, Cornell University (revised 2021-11-15)
+
 - <https://cornell-gis.github.io/qgis-workshop-sages/>
 
-Download the data for this workshop:
+This workshop will cover basic tasks using QGIS: loading data, changing the styles used to display the data on a map, installing plugins, using processing tools to do basic analysis, and exporting a finished map image.
+
+**Download and unzip** the data for this workshop:
 - <https://github.com/cornell-gis/qgis-workshop-sages/archive/main.zip>
+- When the download is complete, open your downloads folder
+- Right-click the .zip file > Extract All...
+
 
 ## Introductions
 
@@ -20,7 +26,9 @@ Download the data for this workshop:
     Vegetable Research Farm in Freeville
   - Note that this data is fictional!
 
+
 ## CSV with coordinate data
+
 - Data Source Manager > Delimited text
   - Select the observations.csv file, check options
 - Zoom to layer, CTRL-zoom-wheel for fine adjustment
@@ -28,7 +36,9 @@ Download the data for this workshop:
 - Inspect data (Identify Features, Attribute Table)
 - Categorized (by variant)
 
+
 ## Basemaps
+
 - Install QuickMapServices plugin
   - Plugins menu > Manage and install plugins
   - Search for "quickmap" and install
@@ -40,7 +50,9 @@ Download the data for this workshop:
 - Zoom to 100%
 - Change opacity of basemap
 
+
 ## Add polygons (fields)
+
 - Add data by dragging the fields.shp file onto QGIS
 - Reorder layers as necessary (points on top)
 - Style polygons - simple fill
@@ -50,7 +62,9 @@ Download the data for this workshop:
 - Single labels, value = crop
 - Font size, buffer 1.0 white (opacity)
 
+
 ## Analysis
+
 - Processing menu > Toolbox
 - Lots of tools!
 - Count points in polygon
@@ -60,14 +74,31 @@ Download the data for this workshop:
   - Create temporary layer
 - Explore results via Identify features / Attribute table
   - What crops tended to have more pests?
-  - Categorized style
+  - Graduated style (by NUMPOINTS)
   - Label map with crop names + pest counts, using expression editor
     "crop" || '\n' || "NUMPOINTS"
 - Right-click layer name > Make permanent
   - save as geopackage fieldcounts.gpkg in data directory
-- Project menu > Import/Export > Export Map to Image
+
+
+## Exporting your map to an image or PDF
+
+- Project menu > Import/Export > Export Map to Image (or PDF)
+- Update the extent or leave as is
+- To preserve the quality for large posters, etc. you can increase the resolution
+
+It is also possible to create a more detailed map layout, with things like a title, text boxes, a north star, and legend. We won't go into the details here, but the general process is:
+
+- Project menu > New Print Layout
+- Choose a title for the layout (optional)
+- Add Item menu > Add Map, then drag a rectangle on the page
+- Edit menu > Move Content (or press C) to pan/zoom the content within the page
+- Add legend, scale bar, etc. (from the Add Item menu)
+- Layout menu > Export as PDF
+
 
 ## Analysis by date
+
 - Processing Toolbox > Statistics by categories
   - Input vector layer = observations
   - leave "field to calculate statistics on" blank (we just want counts)
@@ -77,7 +108,9 @@ Download the data for this workshop:
 - Right-click layer name > Make permanent
   - save as CSV
 
+
 ## Time-based animations
+
 - Right-click observations layer > Properties > Temporal
 - Enable Dynamic Temporal Control
   - Configuration = Single Field with Date/Time
@@ -95,3 +128,10 @@ Download the data for this workshop:
 - Warning -- turn off the temporal controller whenever you are not actively
   using it!
 
+
+## Other resources
+- [QGIS project website](http://qgis.org/)
+- [QGIS training manual](https://docs.qgis.org/latest/en/docs/training_manual/)
+- [QGIS Map Showcase](https://www.flickr.com/groups/qgis/pool/) (for inspiration)
+- [QGIS Tutorials and Tips](http://www.qgistutorials.com/en/) by Ujaval Gandhi
+- [Cornell GIS LibGuide](https://guides.library.cornell.edu/gis) (appointments, etc.)
