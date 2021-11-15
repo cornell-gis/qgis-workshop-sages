@@ -1,5 +1,8 @@
 # QGIS workshop for SAGES (Geneva) 2021-11-15
 
+Download the data for this workshop:
+- https://github.com/kgjenkins/qgis-workshop-sages/archive/main.zip
+
 ## Introductions
 
 - Keith Jenkins, GIS Librarian at Mann Library
