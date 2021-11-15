@@ -1,7 +1,10 @@
 # QGIS workshop for SAGES (Geneva) 2021-11-15
 
+This document:
+- https://cornell-gis.github.io/qgis-workshop-sages/
+
 Download the data for this workshop:
-- https://github.com/kgjenkins/qgis-workshop-sages/archive/main.zip
+- https://github.com/cornell-gis/qgis-workshop-sages/archive/main.zip
 
 ## Introductions
 
